@@ -58,15 +58,10 @@ export const ProductsProvider = ({ children }) => {
       dispatch({ type: GET_SINGLE_PRODUCT_ERROR });
     }
   };
-  // useEffect(async () => {
-  //   const r = await fetchProduct(`${url}`);
-  //   console.log(r);
-  // }, []);
 
   useEffect(() => {
     async function data() {
-      const r = await fetchProduct(`${url}`);
-      console.log(r);
+      await fetchProduct(`${url}`);
     }
     data();
   }, []);
